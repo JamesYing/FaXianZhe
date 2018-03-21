@@ -29,7 +29,7 @@ namespace FXZServer.DependencyInjection
             _services.TryAddSingleton<ILeaderService>(new LeaderService(false));
             _services.TryAddSingleton<ICacheProviderFactory, DefaultCacheProviderFactory>();
             _services.TryAddSingleton<IStoreProviderFactory, DefaultStoreProviderFactory>();
-            _services.AddSingleton<IApiManager, ApiManager>();
+            _services.TryAddSingleton<IApiManager, ApiManager>();
             //AddAuthecticationProvider();
         }
 

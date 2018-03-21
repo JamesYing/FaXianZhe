@@ -48,17 +48,20 @@ namespace FXZServer.Client.Repository
                         request.Protocol = GetValueFromHttpRequest(_protocolKey, "http");
                         request.ApiUrl = GetValueFromHttpRequest(_apiurl);
                         request.AllowedHttpMethod = GetValueFromHttpRequest(_allowedMethod, ClientRequest.DefaultAllowedHttpMethod);
+                        
                     }
                     catch(Exception ex)
                     {
-                        request.Token = String.Empty;
+                       
                         _logger.LogError($"GeToken has been error, the error info:{ex.ToString()}");
                     }
                     
                 }
                 
                 request.RemoteIp = GetRemoteIp();
+                UpdateRequest(request);
             }
+
             return request;
         }
 
@@ -68,14 +71,24 @@ namespace FXZServer.Client.Repository
 
         private string GetValueFromHttpRequest(string key, string defaultValue = "")
         {
-            var result = FromQueryMessage(key);
-            if (String.IsNullOrEmpty(result))
+            var result = defaultValue;
+            try
             {
-                result = FromFormMessage(key);
+                result = FromQueryMessage(key);
                 if (String.IsNullOrEmpty(result))
                 {
-                    return defaultValue;
+                    result = FromFormMessage(key);
+                    if (String.IsNullOrEmpty(result))
+                    {
+                        result = defaultValue;
+                    }
                 }
+
+            }
+            catch(Exception ex)
+            {
+                result = defaultValue;
+                _logger.LogError($"Get Value has been error, key is {key}, the error info:{ex.ToString()}");
             }
 
             return result;

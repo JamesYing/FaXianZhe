@@ -19,7 +19,7 @@ namespace FXZServer.Managers
         {
             _storeProvider = storeProviderFactory.CreateStoreProvider();
             _logger = loggerFactory.CreateLogger<ApiManager>();
-            Sets = new ApiCollections();
+            
             AllServices = new List<ApiService>();
             _isupdated = true;
             InitDatas();
@@ -31,7 +31,7 @@ namespace FXZServer.Managers
             {
                 lock (_lockobj)
                 {
-                    Sets = _storeProvider.Get<ApiCollections>(ApiManagerCacheKey);
+                    Sets = _storeProvider.Get<ApiCollections>(ApiManagerCacheKey) ?? new ApiCollections();
                     InitAllServices();                   
                 }
 

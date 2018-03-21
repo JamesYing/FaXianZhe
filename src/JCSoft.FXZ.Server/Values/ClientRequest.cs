@@ -29,7 +29,7 @@ namespace FXZServer
 
         public bool IsRegisterServer { get; set; }
 
-        public string HealthcheckPath { get; set; } = "hc";
+        public string HealthcheckPath { get; set; } = "/hc";
     }
     
 }
