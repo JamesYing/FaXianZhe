@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FXZServer.Leader.Middleware
+namespace JCSoft.FXZ.Server.Leader.Middleware
 {
     public static class LeaderMiddlewareExtensions
     {

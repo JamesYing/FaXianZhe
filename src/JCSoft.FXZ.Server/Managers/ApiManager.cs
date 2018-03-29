@@ -1,11 +1,12 @@
-﻿using FXZServer.Store;
+﻿using JCSoft.FXZ.Server.Store;
+using JCSoft.FXZ;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FXZServer.Managers
+namespace JCSoft.FXZ.Server.Managers
 {
     public class ApiManager : IApiManager
     {

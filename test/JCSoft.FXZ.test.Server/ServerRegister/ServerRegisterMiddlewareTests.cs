@@ -1,16 +1,17 @@
 ﻿using FXZServer;
-using FXZServer.Configurations;
-using FXZServer.Middleware;
+using JCSoft.FXZ.Server.Configurations;
+using JCSoft.FXZ.Server.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using TestStack.BDDfy;
 using Xunit;
 using Shouldly;
-using FXZServer.ServerRegister.Middlerware;
-using FXZServer.Managers;
+using JCSoft.FXZ.Server.ServerRegister.Middlerware;
+using JCSoft.FXZ.Server.Managers;
 using System;
 using System.Net;
+using JCSoft.FXZ.Server;
 
 namespace JCSoft.FXZ.test.Server.ServerRegister
 {
@@ -28,12 +29,15 @@ namespace JCSoft.FXZ.test.Server.ServerRegister
         {
             var request = new ClientRequest
             {
-                ApiName = "api 1",
-                ApiUrl = "/v2/category",
-                HealthcheckPath = "/hc",
-                Host = "127.0.0.1",
+                ApiService = new ApiService("api 1")
+                {
+                    Url = "/v2/category",
+                    HealthcheckPath = "/hc",
+                    Host = "127.0.0.1",
+                    
+                    Port = "4444"
+                },
                 IsRegisterServer = true,
-                Port = "4444"
             };
             var response = new Response
             {
@@ -52,12 +56,15 @@ namespace JCSoft.FXZ.test.Server.ServerRegister
         {
             var request = new ClientRequest
             {
-                ApiName = "api 1",
-                ApiUrl = "/v2/category",
-                HealthcheckPath = "/hc",
-                Host = "127.0.0.1",
+                ApiService = new ApiService("api 1")
+                {
+                    Url = "/v2/category",
+                    HealthcheckPath = "/hc",
+                    Host = "127.0.0.1",
+                    Port = "4444"
+                },
                 IsRegisterServer = true,
-                Port = "4444"
+                
             };
             var response = new Response
             {

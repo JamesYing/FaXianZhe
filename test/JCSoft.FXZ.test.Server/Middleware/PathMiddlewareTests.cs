@@ -1,12 +1,13 @@
 ﻿using FXZServer;
-using FXZServer.Configurations;
-using FXZServer.Middleware;
+using JCSoft.FXZ.Server.Configurations;
+using JCSoft.FXZ.Server.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using TestStack.BDDfy;
 using Xunit;
 using Shouldly;
+using JCSoft.FXZ.Server;
 
 namespace JCSoft.FXZ.test.Server.Middleware
 {

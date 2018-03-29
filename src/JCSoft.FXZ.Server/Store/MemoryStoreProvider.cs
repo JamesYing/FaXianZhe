@@ -1,9 +1,9 @@
-﻿using FXZServer.Cache.Providers;
+﻿using JCSoft.FXZ.Server.Cache.Providers;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace FXZServer.Store
+namespace JCSoft.FXZ.Server.Store
 {
     public class MemoryStoreProvider : IStoreProvider
     {

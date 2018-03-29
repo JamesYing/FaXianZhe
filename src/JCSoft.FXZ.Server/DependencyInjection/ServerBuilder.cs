@@ -1,16 +1,16 @@
-﻿using FXZServer.Authentication;
-using FXZServer.Cache;
-using FXZServer.Client.Repository;
-using FXZServer.Configurations;
-using FXZServer.Leader;
-using FXZServer.Managers;
-using FXZServer.Store;
+﻿using JCSoft.FXZ.Server.Authentication;
+using JCSoft.FXZ.Server.Cache;
+using JCSoft.FXZ.Server.Client.Repository;
+using JCSoft.FXZ.Server.Configurations;
+using JCSoft.FXZ.Server.Leader;
+using JCSoft.FXZ.Server.Managers;
+using JCSoft.FXZ.Server.Store;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace FXZServer.DependencyInjection
+namespace JCSoft.FXZ.Server.DependencyInjection
 {
     public class ServerBuilder : IServerBuilder
     {

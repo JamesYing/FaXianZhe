@@ -7,7 +7,7 @@ using TestStack.BDDfy;
 using Moq;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
-using FXZServer.Cache.Providers;
+using JCSoft.FXZ.Server.Cache.Providers;
 
 namespace JCSoft.FXZ.test.Server.Cache.Providers
 {

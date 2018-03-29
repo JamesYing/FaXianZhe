@@ -1,8 +1,8 @@
-﻿using FXZServer.Client.Repository;
+﻿using JCSoft.FXZ.Server.Client.Repository;
 using System;
 using System.Threading.Tasks;
 
-namespace FXZServer.Authentication.Providers
+namespace JCSoft.FXZ.Server.Authentication.Providers
 {
     public abstract class BaseAuthenticationProvider : IAuthenticationProvider
     {

@@ -1,11 +1,11 @@
-﻿using FXZServer.Client.Repository;
-using FXZServer.Middleware;
+﻿using JCSoft.FXZ.Server.Client.Repository;
+using JCSoft.FXZ.Server.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 
-namespace FXZServer.Leader.Middleware
+namespace JCSoft.FXZ.Server.Leader.Middleware
 {
     public class LeaderMiddleware : BaseMiddlerware
     {

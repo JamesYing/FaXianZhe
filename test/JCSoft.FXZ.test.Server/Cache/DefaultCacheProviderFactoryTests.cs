@@ -3,10 +3,10 @@ using Xunit;
 using TestStack.BDDfy;
 using Microsoft.Extensions.Caching.Memory;
 using Moq;
-using FXZServer.Cache;
+using JCSoft.FXZ.Server.Cache;
 using Microsoft.Extensions.Logging;
-using FXZServer.Configurations;
-using FXZServer.Cache.Providers;
+using JCSoft.FXZ.Server.Configurations;
+using JCSoft.FXZ.Server.Cache.Providers;
 using System;
 
 namespace JCSoft.FXZ.test.Server.Cache

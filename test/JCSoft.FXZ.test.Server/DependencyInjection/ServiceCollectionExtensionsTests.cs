@@ -8,11 +8,11 @@ using System.Text;
 using Xunit;
 using Shouldly;
 using TestStack.BDDfy;
-using FXZServer.DependencyInjection;
-using FXZServer.Configurations;
+using JCSoft.FXZ.Server.DependencyInjection;
+using JCSoft.FXZ.Server.Configurations;
 using Microsoft.Extensions.Options;
 using System.Linq;
-using FXZServer.Leader;
+using JCSoft.FXZ.Server.Leader;
 
 namespace JCSoft.FXZ.test.Server.DependencyInjection
 {

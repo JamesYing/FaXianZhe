@@ -1,8 +1,8 @@
-﻿using FXZServer.Values.Responses;
+﻿using JCSoft.FXZ.Server.Values.Responses;
 using System;
 using System.Threading.Tasks;
 
-namespace FXZServer.Authentication
+namespace JCSoft.FXZ.Server.Authentication
 {
     public interface IAuthenticationProvider
     {

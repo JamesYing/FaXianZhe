@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace FXZServer.Middleware
+namespace JCSoft.FXZ.Server.Middleware
 {
     public static class PathMiddlewareExtensions
     {

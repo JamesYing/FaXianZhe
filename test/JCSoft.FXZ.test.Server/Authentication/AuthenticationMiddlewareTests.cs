@@ -1,7 +1,8 @@
 ﻿using FXZServer;
-using FXZServer.Authentication;
-using FXZServer.Authentication.Middleware;
-using FXZServer.Client.Repository;
+using JCSoft.FXZ.Server;
+using JCSoft.FXZ.Server.Authentication;
+using JCSoft.FXZ.Server.Authentication.Middleware;
+using JCSoft.FXZ.Server.Client.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;

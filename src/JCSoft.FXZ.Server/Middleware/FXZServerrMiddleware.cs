@@ -1,13 +1,14 @@
-﻿using FXZServer.Authentication.Middleware;
-using FXZServer.Configurations;
-using FXZServer.Leader.Middleware;
-using FXZServer.ServerRegister.Middlerware;
+﻿using JCSoft.FXZ.Server.Authentication.Middleware;
+using JCSoft.FXZ.Server.Configurations;
+using JCSoft.FXZ.Server.Leader.Middleware;
+using JCSoft.FXZ.Server.Middleware;
+using JCSoft.FXZ.Server.ServerRegister.Middlerware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Options;
 using System;
 using System.Threading.Tasks;
 
-namespace FXZServer.Middleware
+namespace JCSoft.FXZ.Server.Middleware
 {
     public static class FXZServerrMiddleware
     {

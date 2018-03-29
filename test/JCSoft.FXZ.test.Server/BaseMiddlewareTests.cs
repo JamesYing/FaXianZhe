@@ -1,5 +1,6 @@
 ﻿using FXZServer;
-using FXZServer.Client.Repository;
+using JCSoft.FXZ.Server;
+using JCSoft.FXZ.Server.Client.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;

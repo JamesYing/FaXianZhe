@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace FXZServer
+namespace JCSoft.FXZ
 {
 
     public class Response

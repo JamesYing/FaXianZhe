@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FXZServer.Values.Responses
+namespace JCSoft.FXZ.Server.Values.Responses
 {
     public class AuthenticationResponse
     {

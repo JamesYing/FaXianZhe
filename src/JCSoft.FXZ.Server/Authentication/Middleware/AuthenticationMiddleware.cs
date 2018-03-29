@@ -1,14 +1,14 @@
-﻿using FXZServer.Client;
-using FXZServer.Client.Repository;
-using FXZServer.Configurations;
-using FXZServer.Middleware;
+﻿using JCSoft.FXZ.Server.Client;
+using JCSoft.FXZ.Server.Client.Repository;
+using JCSoft.FXZ.Server.Configurations;
+using JCSoft.FXZ.Server.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
 
-namespace FXZServer.Authentication.Middleware
+namespace JCSoft.FXZ.Server.Authentication.Middleware
 {
     public class AuthenticationMiddleware : BaseMiddlerware
     {

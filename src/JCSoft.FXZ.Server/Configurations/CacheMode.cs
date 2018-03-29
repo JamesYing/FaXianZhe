@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FXZServer.Configurations
+namespace JCSoft.FXZ.Server.Configurations
 {
     public enum CacheMode
     {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FXZServer.DependencyInjection
+namespace JCSoft.FXZ.Server.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {

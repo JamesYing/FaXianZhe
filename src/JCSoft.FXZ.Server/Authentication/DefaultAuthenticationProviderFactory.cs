@@ -1,11 +1,11 @@
-﻿using FXZServer.Client;
-using FXZServer.Client.Repository;
-using FXZServer.Configurations;
+﻿using JCSoft.FXZ.Server.Client;
+using JCSoft.FXZ.Server.Client.Repository;
+using JCSoft.FXZ.Server.Configurations;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
 using System;
-namespace FXZServer.Authentication
+namespace JCSoft.FXZ.Server.Authentication
 {
     public class DefaultAuthenticationProviderFactory : IAuthenticationProviderFactory
     {

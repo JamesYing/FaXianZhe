@@ -1,7 +1,7 @@
 ﻿using FXZServer;
-using FXZServer.Configurations;
-using FXZServer.Managers;
-using FXZServer.Store;
+using JCSoft.FXZ.Server.Configurations;
+using JCSoft.FXZ.Server.Managers;
+using JCSoft.FXZ.Server.Store;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 

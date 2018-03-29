@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FXZServer.Leader
+namespace JCSoft.FXZ.Server.Leader
 {
     public class LeaderService : ILeaderService
     {

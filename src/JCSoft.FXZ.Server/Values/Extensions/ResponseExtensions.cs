@@ -1,8 +1,9 @@
-﻿using System;
+﻿using JCSoft.FXZ.Server;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FXZServer
+namespace JCSoft.FXZ.Server
 {
     public static class ResponseExtensions
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace FXZServer.ServerRegister.Middlerware
+namespace JCSoft.FXZ.Server.ServerRegister.Middlerware
 {
     public static class ServerRegisterMiddlewareExtensions
     {

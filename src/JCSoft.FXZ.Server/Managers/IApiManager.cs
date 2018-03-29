@@ -1,8 +1,9 @@
-﻿using System;
+﻿using JCSoft.FXZ;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FXZServer.Managers
+namespace JCSoft.FXZ.Server.Managers
 {
     public interface IApiManager
     {

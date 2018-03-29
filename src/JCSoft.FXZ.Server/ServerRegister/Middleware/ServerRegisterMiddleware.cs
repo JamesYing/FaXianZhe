@@ -1,12 +1,13 @@
-﻿using FXZServer.Client.Repository;
-using FXZServer.Managers;
-using FXZServer.Middleware;
+﻿using JCSoft.FXZ.Server;
+using JCSoft.FXZ.Server.Client.Repository;
+using JCSoft.FXZ.Server.Managers;
+using JCSoft.FXZ.Server.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Net;
 
-namespace FXZServer.ServerRegister.Middlerware
+namespace JCSoft.FXZ.Server.ServerRegister.Middlerware
 {
     public class ServerRegisterMiddleware : BaseMiddlerware
     {
@@ -26,7 +27,7 @@ namespace FXZServer.ServerRegister.Middlerware
         internal override async void SubInvoke(HttpContext context)
         {
             Request = _repository.GetRequest();
-            var apiService = new ApiService(Request);
+            var apiService = Request.ToApiService();
             var response = _apiManager.TryAddOrUpdate(apiService);
             var outMsg = string.Empty;
             if (response.IsError)

@@ -1,10 +1,10 @@
 ﻿using System;
-using FXZServer.Cache.Providers;
-using FXZServer.Configurations;
+using JCSoft.FXZ.Server.Cache.Providers;
+using JCSoft.FXZ.Server.Configurations;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 
-namespace FXZServer.Cache
+namespace JCSoft.FXZ.Server.Cache
 {
     public class DefaultCacheProviderFactory : ICacheProviderFactory
     {

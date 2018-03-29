@@ -1,7 +1,7 @@
-﻿using FXZServer.Cache;
-using FXZServer.Cache.Providers;
-using FXZServer.Client.Repository;
-using FXZServer.Configurations;
+﻿using JCSoft.FXZ.Server.Cache;
+using JCSoft.FXZ.Server.Cache.Providers;
+using JCSoft.FXZ.Server.Client.Repository;
+using JCSoft.FXZ.Server.Configurations;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FXZServer.Store
+namespace JCSoft.FXZ.Server.Store
 {
     public class DefaultStoreProviderFactory : IStoreProviderFactory
     {

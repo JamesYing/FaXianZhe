@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
-using FXZServer.Values;
+using JCSoft.FXZ.Server.Values;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
-namespace FXZServer.Client.Repository
+namespace JCSoft.FXZ.Server.Client.Repository
 {
     public class DefaultClientRequestRepository : IClientRequestRepository
     {
@@ -19,6 +21,7 @@ namespace FXZServer.Client.Repository
         private const string _apiurl = "apiurl";
         private const string _protocolKey = "protocol";
         private const string _allowedMethod = "allowedMethod";
+        private const string _apiserviceKey = "fxzApiService";
 
 
         public DefaultClientRequestRepository(IHttpContextAccessor httpContextAccessor,
@@ -36,23 +39,17 @@ namespace FXZServer.Client.Repository
                 if (_httpContextAccessor.HttpContext.Items != null && _httpContextAccessor.HttpContext.Items.ContainsKey(_requestKey))
                 {
                     request = _httpContextAccessor.HttpContext.Items[_requestKey] as ClientRequest;
+                    return request;
                 }
                 if (_httpContextAccessor.HttpContext.Request != null)
                 {
                     try
                     {
                         request.Token = GetToken();
-                        request.ApiName = GetValueFromHttpRequest(_apiNameKey);
-                        request.Host = GetValueFromHttpRequest(_hostKey);
-                        request.Port = GetValueFromHttpRequest(_portKey);
-                        request.Protocol = GetValueFromHttpRequest(_protocolKey, "http");
-                        request.ApiUrl = GetValueFromHttpRequest(_apiurl);
-                        request.AllowedHttpMethod = GetValueFromHttpRequest(_allowedMethod, ClientRequest.DefaultAllowedHttpMethod);
-                        
+                        request.ApiService = GetApiService();
                     }
                     catch(Exception ex)
                     {
-                       
                         _logger.LogError($"GeToken has been error, the error info:{ex.ToString()}");
                     }
                     
@@ -65,9 +62,21 @@ namespace FXZServer.Client.Repository
             return request;
         }
 
+        private ApiService GetApiService()
+        {
+            using (var bodyStream = _httpContextAccessor.HttpContext.Request.Body)
+            using (var bodyReader = new StreamReader(bodyStream))
+            {
+                var body = bodyReader.ReadToEnd();
+                var result = JsonConvert.DeserializeObject<Request<ApiService>>(body);
+
+                return result?.Data;
+            }
+        }
+
         private string GetRemoteIp() => _httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString();
 
-        private string GetToken() => FromHeaderMessage(_fxzTokenKey) ?? GetValueFromHttpRequest(_fxzTokenKey);
+        private string GetToken() => FromHeaderMessage(_fxzTokenKey);
 
         private string GetValueFromHttpRequest(string key, string defaultValue = "")
         {

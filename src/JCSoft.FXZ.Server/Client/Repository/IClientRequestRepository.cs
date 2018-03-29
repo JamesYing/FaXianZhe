@@ -1,7 +1,7 @@
-﻿using FXZServer.Values;
+﻿using JCSoft.FXZ.Server.Values;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace FXZServer.Client.Repository
+namespace JCSoft.FXZ.Server.Client.Repository
 {
     public interface IClientRequestRepository
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FXZServer.DependencyInjection
+namespace JCSoft.FXZ.Server.DependencyInjection
 {
     public interface IServerBuilder
     {

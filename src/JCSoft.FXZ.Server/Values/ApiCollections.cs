@@ -1,8 +1,7 @@
-﻿using System;
+﻿using JCSoft.FXZ;
 using System.Collections.Generic;
-using System.Text;
 
-namespace FXZServer
+namespace JCSoft.FXZ.Server
 {
     public class ApiCollections : Dictionary<string, List<ApiService>>
     {

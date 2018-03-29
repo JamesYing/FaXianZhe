@@ -1,6 +1,6 @@
-﻿using FXZServer.Authentication;
-using FXZServer.Client.Repository;
-using FXZServer.Configurations;
+﻿using JCSoft.FXZ.Server.Authentication;
+using JCSoft.FXZ.Server.Client.Repository;
+using JCSoft.FXZ.Server.Configurations;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Moq;

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FXZServer.Authentication.Middleware
+namespace JCSoft.FXZ.Server.Authentication.Middleware
 {
     public static class AuthenticationMiddlewareExtensions
     {

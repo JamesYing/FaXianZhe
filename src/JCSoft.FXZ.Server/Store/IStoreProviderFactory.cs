@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace FXZServer.Store
+namespace JCSoft.FXZ.Server.Store
 {
     public interface IStoreProviderFactory
     {

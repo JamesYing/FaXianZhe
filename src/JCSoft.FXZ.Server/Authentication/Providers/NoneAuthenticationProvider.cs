@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace FXZServer.Authentication
+namespace JCSoft.FXZ.Server.Authentication
 {
     public class NoneAuthenticationProvider : IAuthenticationProvider
     {

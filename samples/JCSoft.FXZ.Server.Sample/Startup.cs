@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FXZServer.DependencyInjection;
-using FXZServer.Middleware;
+using JCSoft.FXZ.Server.DependencyInjection;
+using JCSoft.FXZ.Server.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,9 +23,9 @@ namespace JCSoft.FXZ.Server.Sample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<FXZServer.Configurations.FXZOptions>(options =>
+            services.Configure<JCSoft.FXZ.Server.Configurations.FXZOptions>(options =>
             {
-                options.SafeMode = FXZServer.Configurations.SafeMode.Text;
+                options.SafeMode = JCSoft.FXZ.Server.Configurations.SafeMode.Text;
                 options.Token = "newkey";
             });
             services.AddFaXianZhe();

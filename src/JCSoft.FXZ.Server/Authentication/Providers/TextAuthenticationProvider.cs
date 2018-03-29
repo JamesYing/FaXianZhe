@@ -1,13 +1,13 @@
-﻿using FXZServer.Authentication.Providers;
-using FXZServer.Client.Repository;
-using FXZServer.Configurations;
-using FXZServer.Values;
-using FXZServer.Values.Responses;
+﻿using JCSoft.FXZ.Server.Authentication.Providers;
+using JCSoft.FXZ.Server.Client.Repository;
+using JCSoft.FXZ.Server.Configurations;
+using JCSoft.FXZ.Server.Values;
+using JCSoft.FXZ.Server.Values.Responses;
 using Microsoft.Extensions.Options;
 using System;
 using System.Threading.Tasks;
 
-namespace FXZServer.Authentication
+namespace JCSoft.FXZ.Server.Authentication
 {
     public class TextAuthenticationProvider : BaseAuthenticationProvider
     {

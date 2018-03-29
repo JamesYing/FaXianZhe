@@ -1,11 +1,11 @@
-﻿using FXZServer.Client;
-using FXZServer.Values.Responses;
+﻿using JCSoft.FXZ.Server.Client;
+using JCSoft.FXZ.Server.Values.Responses;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FXZServer.Authentication
+namespace JCSoft.FXZ.Server.Authentication
 {
     public class TokenAuthenticationProvider : IAuthenticationProvider
     {

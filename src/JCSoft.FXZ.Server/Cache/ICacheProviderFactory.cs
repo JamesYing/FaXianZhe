@@ -1,7 +1,7 @@
-﻿using FXZServer.Cache.Providers;
-using FXZServer.Configurations;
+﻿using JCSoft.FXZ.Server.Cache.Providers;
+using JCSoft.FXZ.Server.Configurations;
 
-namespace FXZServer.Cache
+namespace JCSoft.FXZ.Server.Cache
 {
     public interface ICacheProviderFactory
     {

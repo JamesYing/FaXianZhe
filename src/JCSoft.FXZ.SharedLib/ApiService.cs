@@ -1,21 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace FXZServer
+namespace JCSoft.FXZ
 {
     public class ApiService
     {
-        public ApiService(ClientRequest request)
-        {
-            Name = request.ApiName;
-            Url = request.ApiUrl;
-            Host = request.Host;
-            Port = request.Port;
-            HealthcheckPath = request.HealthcheckPath;
-            ID = Guid.NewGuid();
-            Protocol = request.Protocol;
-            AllowedHttpMethod = request.AllowedHttpMethod;
-        }
-
+        public ApiService() { }
         public ApiService(string apiName) => Name = apiName;
 
         public string Name { get; set; }

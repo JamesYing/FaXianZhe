@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using FXZServer.Client.Repository;
-using FXZServer.Configurations;
+using JCSoft.FXZ.Server.Client.Repository;
+using JCSoft.FXZ.Server.Configurations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.Options;
 using System.Collections;
 using System.Linq;
 
-namespace FXZServer.Middleware
+namespace JCSoft.FXZ.Server.Middleware
 {
     public class PathMiddleware
     {
