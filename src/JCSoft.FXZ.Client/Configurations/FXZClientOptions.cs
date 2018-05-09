@@ -6,6 +6,8 @@
 
         public string Token { get; set; }
 
+        public string TokenKey { get; set; }
+
         public string AuthenticationServerAddress { get; set; }
 
         public ApiService ApiService { get; set; }

@@ -6,9 +6,9 @@ namespace JCSoft.FXZ.Client.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
-        public static void AddFXZClient(this IServiceCollection services, IConfiguration configuration)
+        public static IClientBuilder AddFXZClient(this IServiceCollection services, IConfiguration configuration)
         {
-            services.Configure<FXZClientOptions>(configuration);
+            return new ClientBuilder(services, configuration);
         }
     }
 }
